@@ -1,0 +1,685 @@
+﻿@charset "utf-8";
+/* 201608刮刮卡活動網頁 */
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: Arial, Helvetica, "微軟正黑體", sans-serif;
+	box-sizing: border-box;
+	font-weight: normal;
+	outline: none;
+}
+body {
+	position: relative;
+}
+header {
+	width: 100%;
+	height: 60px;
+	background-color: #FFF;
+	border-bottom: solid 3px #e5006e;
+    position:absolute;
+    top:0;
+}
+header .gash {
+	width: 1000px;
+	height: 60px;
+	background-image: url(../Images/GASH.jpg);
+	background-size: 160px;
+	background-repeat: no-repeat;
+	background-position: 20px;
+	margin: 0 auto;
+}
+.banner {
+	width: 100%;
+	height: 315px;
+	background-image: url(../Images/banner.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-color: #ffd800;
+    margin-top:42px;
+}
+/*選單*/
+nav {
+	width: 1000px;
+	height: 40px;
+	background-color: #00c6ff;
+	margin: -60px auto 0 auto;
+	padding: 0 20px;
+}
+.menu ul {
+	width: 1000px;
+	height: 50px;
+	margin: 0 auto;
+	list-style-type: none;
+}
+.menu ul li {
+	float: left;
+	display: block;
+	width: 160px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #FFF;
+	cursor: pointer;
+}
+.menu ul li h4 {
+	font-size: 18px;
+}
+.menu ul li h4 a {
+	text-decoration: none;
+	color: #FFF;
+}
+.menu ul li p {
+	font-size: 14px;
+}
+/*活動內容*/
+.content {
+	width: 1000px;
+	padding: 30px 20px 0 20px;
+	margin: 0 auto;
+}
+.content h1 {
+	width: 100%;
+	height: 40px;
+	background-color: #ff8a79;
+	border-radius: 50px;
+	padding: 0 20px;
+	font-size: 18px;
+	color: #ffffff;
+	line-height: 40px;
+	margin-bottom: 15px;
+}
+.gamapay {
+	margin-left: 24px;
+	margin-bottom: 20px;
+}
+.content h2 {
+	font-size: 16px;
+	margin-bottom: 5px;
+	margin-left: 16px;
+	color: #2391e6;
+}
+.content h3 {
+	font-size: 18px;
+	margin-bottom: 5px;
+	margin-left: 16px;
+	color: #ff6000;
+}
+.subtitle {
+	display: block;
+	line-height: 26px;
+	margin-bottom: 20px !important;
+	color: #161616 !important;
+	margin-left: 24px !important;
+}
+.content p {
+	font-size: 16px;
+	line-height: 26px;
+	margin: 0 24px 24px 24px;
+}
+.t1 {
+	margin: 0 24px 0px 24px !important;
+	font-weight: bold;
+}
+.t2 {
+	font-size: 15px !important;
+	margin: 0 24px 10px 42px !important;
+}
+.t3 {
+	margin: 0 24px 10px 24px !important;
+}
+
+.bold{
+	font-weight:bold;}
+	
+
+.red{
+	color:#F00;}
+	
+	
+
+/*前往兌換10%回饋按鈕*/
+.btnGo {
+	width: 400px;
+	height: 40px;
+	background-image: url(../Images/btngo.jpg);
+	border: none;
+	font-size: 15px;
+	color: #fff;
+	letter-spacing: 1px;
+	cursor: pointer;
+	display: block;
+	margin: 0 auto 30px auto;
+}
+.green {
+	background-color: #6eb92b;
+	color: #FFF;
+	letter-spacing: 1px;
+}
+.bk {
+	background-color: #333;
+	color: #FFF;
+	letter-spacing: 1px;
+}
+/*橘子支買點數*/
+ul.btnGash {
+	list-style: none;
+}
+.btnGash li {
+	display: inline-block;
+	width: 200px;
+	height: 100px;
+	border: solid 1px #cacaca;
+	text-align: center;
+	border-radius: 20px;
+	background-image: url(../Images/btn_point_1.jpg);
+	background-repeat: repeat-x;
+	cursor: pointer;
+	margin: 20px 10px 0px 10px;
+}
+.btnGash li:last-child {
+	margin-bottom: 30px;
+}
+.item {
+	padding-top: 35px;
+}
+p.point {
+	font-size: 18px;
+	line-height: 20px;
+	margin: 0 !important;
+}
+p.soldOut {
+	font-size: 14px;
+	margin: 0 !important;
+	color: #ff321d;/*display: none;*/
+}
+/*購買資訊填寫*/
+
+.userinfo {
+	width: 500px;
+	margin-top: 20px;
+	margin-left: 24px;
+	float: left;
+	margin-right: 30px;
+}
+.userinfo label {
+	display: block;
+	width: 100px;
+	height: 36px;
+	float: left;
+	line-height: 36px;
+}
+.userinfo select {
+	width: 400px;
+	height: 36px;
+	border: none;
+	padding: 5px 10px;
+	margin-bottom: 20px;
+	border: solid 1px #c1c1c1;
+	font-size: 15px;
+}
+.userinfo input {
+	width: 400px;
+	height: 36px;
+	border: none;
+	padding: 5px 10px;
+	margin-bottom: 20px;
+	border: solid 1px #c1c1c1;
+	font-size: 15px;
+}
+.checklist {
+	margin-top: 24px;
+	font-size: 14px;
+}
+.checklist input {
+	margin-bottom: 10px;
+}
+/*注意事項*/
+
+
+.buyTip {
+	width: 920px;
+	height: auto;
+	padding-left: 15px;
+	margin: 0 auto 20px auto;
+	font-size: 14px;
+	line-height: 24px;
+	text-align: justify;
+	letter-spacing: 1px;
+}
+.info {
+	font-size: 14px !important;
+	line-height: 24px !important;
+	margin-left: 18px !important;
+}
+ol.tip {
+	width: 920px;
+	height: auto;
+	padding-left: 15px;
+	margin: 0 auto 20px auto;
+	font-size: 14px;
+	line-height: 24px;
+	text-align: justify;
+	letter-spacing: 1px;
+}
+ol.buyTip p {
+	font-size: 14px;
+	line-height: 24px;
+	margin: 0;
+	margin-left: -22px;
+	color: #2391e6;
+}
+a {
+	color: #008cff;
+	word-break: break-all;
+}
+/*查詢資訊*/
+.search {
+	width: 620px;
+	margin: 0 auto;
+}
+.search label {
+	display: block;
+	width: 220px;
+	height: 36px;
+	float: left;
+	line-height: 36px;
+}
+.search input {
+	width: 400px;
+	height: 36px;
+	border: none;
+	background-color: #e1e1e1;
+	padding: 5px 10px;
+	margin-bottom: 20px;
+}
+.userinfo select {
+	width: 100%;
+}
+.btnSerh {
+	width: 400px;
+	height: 40px;
+	background-image: url(../Images/btnserh.jpg);
+	border: none;
+	font-size: 15px;
+	color: #fff;
+	letter-spacing: 1px;
+	cursor: pointer;
+	display: block;
+	margin: 0 0 30px 220px;
+}
+.line {
+	border-bottom: dotted 1px #999999;
+	margin: 40px 0 !important;
+}
+/*查詢表格*/
+.result {
+	min-height: 200px;
+	margin-bottom: 20px;
+}
+table {
+	border-top: solid 1px #CCC;
+	border-left: solid 1px #CCC;
+	word-break: break-word;
+	margin: 50px 0;
+}
+table td {
+	border-right: solid 1px #CCC;
+	border-bottom: solid 1px #CCC;
+	padding: 10px;
+	text-align: center;
+	font-size: 16px;
+}
+/*其他按鈕*/
+.other {
+	width: 1000px;
+	margin: 30px auto;
+	text-align: center;
+}
+.btn2 {
+	width: 200px;
+	height: 40px;
+	border: none;
+	border-radius: 50px;
+	margin: 0 20px;
+	font-size: 16px;
+	background-color: #6eb92b;
+	color: #ffffff;
+	cursor: pointer;
+}
+.DISPLAY {
+	display: none;
+}
+/*版權宣告*/
+footer {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	background-color: #000;
+	text-align: center;
+	color: #ffffff;
+	font-size: 12px;
+}
+/*特惠禮包*/
+ul.boxBlock {
+	list-style: none;
+	margin-top: 15px;
+	cursor: pointer;
+}
+ul.boxBlock li:hover {
+	background-color: #e6e6e6;
+}
+ul.boxBlock li {
+	width: 310px;
+	height: 145px;
+	float: left;
+	background-color: #f0f0f0;
+	padding: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+ul.boxBlock li img {
+	float: left;
+	margin-right: 10px;
+}
+.boxTip {
+	width: 165px;
+	float: left;
+}
+.boxTip h5 {
+	font-size: 16px;
+	color: #e5006e;
+	margin-bottom: 5px;
+}
+.boxTip p {
+	font-size: 12px;
+	line-height: 18px;
+	margin: 0;
+}
+ @media screen and (min-width:320px) and (max-width:999px) {
+header {
+	height: 50px;
+}
+header .gash {
+	width: 100%;
+	height: 50px;
+	background-position: 10px 13px;
+	margin: 0;
+}
+.banner {
+	width: 100%;
+	height: 0;
+	padding-bottom: 34%;
+	background-size: cover;
+	background-position: top center;
+    margin-top:30px;
+}
+/*選單*/
+nav {
+	width: 100%;
+	height: 50px;
+	margin: -15px auto 0 auto;
+	padding: 0;
+}
+.menu ul {
+	width: 100%;
+	height: 50px;
+}
+.menu ul li {
+	display: block;
+	float: left;
+	width: 16.66666666666667%;
+	height: 50px;
+	line-height: 50px;
+	padding-top: 0px;
+}
+.menu ul li h4 {
+	display: inline-block;
+	font-size: 15px;
+	line-height: 20px;
+	vertical-align: middle;
+	padding: 0 2px;
+}
+.menu ul li p {
+	display: none;
+}
+/*活動內容*/
+.content {
+	width: 100%;
+	padding: 3% 2%;
+	margin: 0 auto;
+}
+.content h1 {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 10px;
+}
+.content h2 {
+	margin-left: 2px;
+}
+.content h3 {
+	font-size: 16px;
+	margin-left: 0;
+}
+.content p {
+	font-size: 14px;
+	line-height: 24px;
+	margin: 0 0px 10px 2px;
+}
+.subtitle {
+	line-height: 25px;
+	margin: 0 5px 20px 5px !important;
+	font-size: 15px !important;
+}
+.t1 {
+	margin: 0 0px 0px 8px !important;
+}
+.t2 {
+	margin: 0 24px 10px 8px !important;
+}
+.t3 {
+	margin: 0 24px 10px 8px !important;
+}
+/*返點區塊*/
+.pinBlock {
+	width: 100%;
+	height: auto;
+	padding: 30px 20px 20px 20px;
+}
+.pinBlock label {
+	display: none;
+}
+.pinBlock .inputBox {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 20px;
+}
+.pinBlock .btn {
+	margin: 0px 20px 0 20px;
+}
+.card {
+	width: 100%;
+	height: 0;
+	padding-bottom: 50%;
+	background-image: url(../Images/card_b.png); /*換圖*/
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+	margin: 0 auto 30px auto;
+}
+/*查詢表格*/
+table td {
+	padding: 5px;
+	font-size: 14px;
+}
+/*注意事項*/
+.tip {
+	width: 100%;
+	padding: 0 2%;
+	margin: 0;
+}
+.tip h1 {
+	width: 100%;
+}
+.tip ol {
+	width: 100%;
+	padding-left: 5%;
+	margin: 0 auto 20px auto;
+}
+.buyTip {
+	width: 100%;
+	padding-left: 4%;
+	margin: 0 auto 20px auto;
+	line-height: 22px;
+	letter-spacing: 0;
+}
+/*橘子支買點數*/
+.btnGash li {
+	width: 30%;
+	height: 60px;
+	border-radius: 10px;
+	margin: 10px 5px;
+}
+.btnGash li:last-child {
+	margin-bottom: 30px;
+}
+.item {
+	padding-top: 5px;
+}
+p.point {
+	font-size: 15px;
+}
+p.soldOut {
+	font-size: 14px;
+}
+/*購買資訊填寫*/
+.userinfo {
+	width: 100%;
+	margin: 10px 0 0 0;
+	float: none;
+	padding: 0 5px;
+}
+.userinfo label {
+	width: 100%;
+	height: auto;
+	float: none;
+	line-height: 30px;
+}
+.userinfo input {
+	width: 100%;
+}
+.checklist {
+	margin-top: 0;
+	font-size: 14px;
+	width: 100%;
+	padding: 0 10px;
+}
+.btnGo {
+	width: 100%;
+	margin: 15px auto;
+}
+.line {
+	margin: 15px 0 !important;
+}
+/*其他按鈕*/
+.other {
+	width: 100%;
+	margin: 10px auto;
+}
+.btn2 {
+	width: 45%;
+	margin: 5px;
+	font-size: 14px
+}
+.search {
+	width: 100%;
+}
+.search label {
+	width: 100%;
+	float: none;
+}
+.search input {
+	width: 100%;
+}
+.btnSerh {
+	margin: 0;
+}
+.aa {
+	margin-left: 8px !important
+}
+/*商品區*/
+ul.boxBlock li {
+	display: inline-flex;
+	width: 100%;
+	height: 145px;
+	float: none;
+	padding: 2%;
+	margin-right: 0;
+	margin-bottom: 10px;
+}
+ul.boxBlock li img {
+	width: 14%;
+	min-width: 110px;
+	min-height: 120px;
+	margin-right: 2%;
+}
+.boxTip {
+	width: 80%;
+}
+.boxTip p {
+	font-size: 14px;
+	line-height: 22px;
+	margin: 0;
+}
+ol.tip {
+	width: 100%;
+	height: auto;
+	padding-left: 5%;
+	font-size: 14px;
+	line-height: 22px;
+	letter-spacing: 0;
+}
+.boxTip h5{
+	margin-bottom:0;
+}
+ @media screen and (min-width:320px) and (max-width:460px) {
+.menu ul li h4 {
+ font-size: 14px;
+ line-height: 20px;
+}
+ .content h1 {
+height: auto;
+ font-size: 15px;
+ line-height: 20px;
+ padding: 5px 20px;
+}
+ .tip h1 {
+height: auto;
+ font-size: 15px;
+ line-height: 20px;
+ padding: 5px 20px;
+}
+ .content h2 {
+ margin-left: 0px;
+}
+/* .content p {
+ margin: 0 0px 20px 8px;
+}*/
+.pinBlock .btn {
+ width: 100px;
+ height: 44px;
+ border: none;
+ border-radius: 0;
+ margin: 0 10px;
+}
+table td {
+ font-size: 14px;
+}
+.btnGash li {
+ width: 45%;
+}
+ .tip ol, .buyTip {
+ width:95%;
+}
+}
+}

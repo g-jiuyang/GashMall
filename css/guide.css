@@ -1,0 +1,287 @@
+.guide-frame {
+    font-family: PingFangTC, NotoSans TC, sans-serif;
+    padding-top: 86px;
+    width: 95vw;
+    max-width: 1180px;
+    margin: 0 auto;
+    color: #1E2333;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    color: #1E2333;
+}
+
+h3 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #1E2333;
+}
+
+.hide {
+    display: none;
+}
+
+.mobile-only {
+    display: none !important;
+}
+
+/* Swiper -- start */
+.swiper {
+    overflow: visible !important;
+}
+
+.swiper-pagination {
+    bottom: -22px !important;
+}
+
+.swiper-pagination-bullet {
+    height: 10px;
+    width: 10px;
+    background-color: #DDDDDD;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #E72E6B !important;
+}
+
+/* Swiper -- end */
+
+
+
+/* Tab Links -- start */
+.tab-links {
+    width: 226px;
+    position: fixed;
+    border-top: #DDDDDD 1px solid;
+}
+
+.tab-links li {
+    border-bottom: #DDDDDD 1px solid;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.tab-links li a {
+    display: block;
+    padding: 20px 16px;
+}
+
+.tab-links li:hover a,
+.tab-links li.active a {
+    color: #E72E6B;
+    font-weight: 600;
+}
+
+/* Tab Links -- end */
+
+/* Tab Contents -- start */
+.tab-contents {
+    width: calc(100% - 314px);
+    margin-left: 314px;
+}
+
+.tab-contents>li {
+    display: none;
+}
+
+.tab-contents>li.active {
+    display: inline;
+}
+
+
+
+/* Chips -- start */
+.chip-links {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 28px;
+}
+
+.chip-links>ul {
+    display: flex;
+    min-width: max-content;
+    gap: 12px;
+}
+
+.chip-links::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0;
+    height: 0;
+}
+
+.chip-links::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.chip-links>ul>li {
+    display: block;
+    padding: 4px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+    background-color: #DDDDDD;
+    border: #DDDDDD 1px solid;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.chip-links>ul>li:hover,
+.chip-links>ul>li.active {
+    background-color: #F6F6F6;
+    border-color: #E72E6B;
+    color: #E72E6B;
+}
+
+
+
+.chip-contents>li {
+    display: none;
+}
+
+.chip-contents>li.active {
+    display: inline;
+}
+
+.chip-contents section {
+    margin-top: 24px;
+    padding-bottom: 36px;
+}
+
+.chip-contents p {
+    color: #353B50;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.7;
+    margin: 20px auto 28px;
+}
+
+.chip-contents img {
+    max-width: 100%;
+}
+
+/* Chips -- end */
+
+/* Tab Contents -- end */
+
+
+/* small pc */
+@media screen and (max-width:1250px) {
+    .guide-frame {
+        padding-top: 20px;
+    }
+
+    /* Tab Links -- start */
+    .tab-links {
+        width: 200px;
+    }
+
+    /* Tab Links -- end */
+    /* Tab Contents -- start */
+    .tab-contents {
+        width: calc(100% - 260px);
+        margin-left: 260px;
+    }
+
+    /* Tab Contents -- end */
+}
+
+
+
+/* pad */
+@media screen and (max-width:960px) {
+    .guide-frame {
+        width: 90vw;
+        padding-top: 48px;
+    }
+
+    /* Tab Links -- start */
+    .tab-links {
+        width: 160px;
+    }
+
+    /* Tab Links -- end */
+
+    /* Tab Contents -- start */
+    .tab-contents {
+        width: calc(100% - 208px);
+        margin-left: 208px;
+    }
+
+    /* Tab Contents -- end */
+}
+
+
+
+/* mobile */
+@media screen and (max-width:767px) {
+    .guide-frame {
+        padding-top: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .pc-only {
+        display: none !important;
+    }
+
+    .mobile-only {
+        display: inline !important;
+    }
+
+    /* Tab Links -- start */
+    .tab-links {
+        width: 100%;
+        display: flex;
+        gap: 16px;
+        padding: 0 20px;
+        background-color: #FFE3EC;
+        z-index: 5;
+    }
+
+    .tab-links li {
+        border-bottom: 2px solid transparent;
+        font-size: 16px;
+    }
+
+    .tab-links li a {
+        padding: 14px 0;
+    }
+
+    .tab-links li.active {
+        border-color: #E72E6B;
+    }
+
+    /* Tab Links -- end */
+    /* Tab Contents -- start */
+    .tab-contents {
+        padding-top: 50px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .chip-links {
+        padding: 20px;
+    }
+
+    .chip-contents {
+        margin: 12px 20px 0;
+    }
+
+    .chip-contents section {
+        text-align: center;
+    }
+
+    .chip-contents section h3,
+    .chip-contents section p {
+        text-align: left;
+    }
+
+    /* Tab Contents -- end */
+}
+
+
+
+/* small mobile */
+@media screen and (max-width:320px) {}
