@@ -2,6 +2,7 @@
     font-family: PingFangTC, NotoSans TC, sans-serif;
     padding-top: 86px;
     width: 95vw;
+    overflow-x: hidden;
     max-width: 1180px;
     margin: 0 auto;
     color: #1E2333;
@@ -136,12 +137,27 @@ h3 {
 
 
 
-.chip-contents>li {
-    display: none;
+.chip-contents {
+    width: 100%;
+    overflow-x: hidden;
 }
 
-.chip-contents>li.active {
-    display: inline;
+.chip-contents>ul {
+    display: flex;
+    width: max-content;
+    transition: transform .3s ease-in-out;
+    gap: 20px;
+}
+
+.chip-contents>ul>li {
+    flex: 100%;
+    padding-right: 20px;
+    /* opacity: 0;
+    transition: opacity .3s ease; */
+}
+
+.chip-contents>ul>li.active {
+    opacity: 1;
 }
 
 .chip-contents section {
