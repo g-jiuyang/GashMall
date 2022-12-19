@@ -107,13 +107,13 @@ h3 {
 }
 
 .chip-links::-webkit-scrollbar {
-    background-color: transparent;
+    background-color: red;
     width: 0;
     height: 0;
 }
 
 .chip-links::-webkit-scrollbar-thumb {
-    background-color: transparent;
+    background-color: yellow;
 }
 
 .chip-links>ul>li {
@@ -250,8 +250,7 @@ h3 {
     .tab-links {
         width: 100%;
         display: flex;
-        gap: 16px;
-        padding: 0 20px;
+        padding: 0 12px;
         background-color: #FFE3EC;
         z-index: 5;
     }
@@ -262,7 +261,7 @@ h3 {
     }
 
     .tab-links li a {
-        padding: 14px 0;
+        padding: 14px 8px;
     }
 
     .tab-links li.active {
@@ -277,7 +276,7 @@ h3 {
         margin: 0 auto;
     }
 
-    .chip-links {
+    .chip-links>ul {
         padding: 20px;
     }
 

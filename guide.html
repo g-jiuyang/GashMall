@@ -1316,6 +1316,9 @@
 
         $('.tab-contents > li').removeClass('active');
         $(tabC).addClass('active');
+        $(tabC).find('.chip-links li').removeClass('active');
+        $(tabC).find('.chip-links li:first-child').addClass('active');
+        $(tabC).find('.chip-contents > ul').css('transform', 'translateX(0)')
     });
     $('#tabs li:nth-child(2)').click(function () {
         $("html, body").animate({ scrollTop: 0 }, "fast");
@@ -1327,6 +1330,9 @@
 
         $('.tab-contents > li').removeClass('active');
         $(tabC).addClass('active');
+        $(tabC).find('.chip-links li').removeClass('active');
+        $(tabC).find('.chip-links li:first-child').addClass('active');
+        $(tabC).find('.chip-contents > ul').css('transform', 'translateX(0)')
     });
 
 
