@@ -107,13 +107,14 @@ h3 {
 }
 
 .chip-links::-webkit-scrollbar {
-    background-color: red;
+    display: none;
+    background-color: transparent;
     width: 0;
     height: 0;
 }
 
 .chip-links::-webkit-scrollbar-thumb {
-    background-color: yellow;
+    background-color: transparent;
 }
 
 .chip-links>ul>li {
@@ -276,8 +277,13 @@ h3 {
         margin: 0 auto;
     }
 
+    .chip-links {
+        padding: 0;
+    }
+
     .chip-links>ul {
         padding: 20px;
+        padding-bottom: 0;
     }
 
     .chip-contents {
