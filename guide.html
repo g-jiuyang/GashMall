@@ -1294,7 +1294,7 @@
     }
 
 
-    // 輪播
+    // 圖片輪播
     var Swiper = new Swiper('.swiper', {
         slidesPerView: 'auto',
         spaceBetween: 30,
@@ -1318,7 +1318,16 @@
         $(tabC).addClass('active');
         $(tabC).find('.chip-links li').removeClass('active');
         $(tabC).find('.chip-links li:first-child').addClass('active');
-        $(tabC).find('.chip-contents > ul').css('transform', 'translateX(0)')
+        $(tabC).find('.chip-contents > ul').css('transform', 'translateX(0)');
+
+        // 淡入淡出：
+        $(tabC).find('.chip-contents > ul > li:first-child').addClass('active');
+
+        // 抓取高度
+        setTimeout(function () {
+            var chipH = $(tabC).find('.chip-contents > ul > li:first-child').height()
+            $(tabC).find('.chip-contents > ul').css('height', chipH + 'px');
+        }, 300);
     });
     $('#tabs li:nth-child(2)').click(function () {
         $("html, body").animate({ scrollTop: 0 }, "fast");
@@ -1332,7 +1341,16 @@
         $(tabC).addClass('active');
         $(tabC).find('.chip-links li').removeClass('active');
         $(tabC).find('.chip-links li:first-child').addClass('active');
-        $(tabC).find('.chip-contents > ul').css('transform', 'translateX(0)')
+        $(tabC).find('.chip-contents > ul').css('transform', 'translateX(0)');
+
+        // 淡入淡出：
+        $(tabC).find('.chip-contents > ul > li:first-child').addClass('active');
+
+        // 抓取高度
+        setTimeout(function () {
+            var chipH = $(tabC).find('.chip-contents > ul > li:first-child').height();
+            $(tabC).find('.chip-contents > ul').css('height', chipH + 'px');
+        }, 300);
     });
 
 
@@ -1340,14 +1358,21 @@
     $('.chip-links > ul > li').click(function () {
         var nowTab = $(this).parent().parent().parent();
         var chipLength = $(this).parent().children('li').length;
-        var nowChip = $(this).index();
+        var nowChip = $(this);
         var chipC = $(this).attr('for');
+        var tranX = -100 + '% + 20px * ' + (chipLength - 1) + ')/' + chipLength + ' - 20px)*' + nowChip.index();
 
         nowTab.find('li').removeClass('active');
         $(this).addClass('active');
-        nowTab.find('.chip-contents > ul').css('transform', 'translateX(calc(((' + -100 + '% + 20px * ' + (chipLength - 1) + ')/' + chipLength + ' - 20px)*' + nowChip + ')');
-        // nowTab.find('.chip-contents > ul > li').removeClass('active');
-        // $('.' + chipC).addClass('active');
+        nowTab.find('.chip-contents > ul').css('transform', 'translateX(calc(((' + tranX + ')');
+        setTimeout(() => {
+            var chipH = $(nowTab).find('.' + chipC);
+            chipH.parent().css('height', chipH.height() + 'px');
+        }, 300);
+
+        // 淡入淡出：
+        nowTab.find('.chip-contents > ul > li').removeClass('active');
+        $('.' + chipC).addClass('active');
     })
 
 
@@ -1363,7 +1388,6 @@
 
     $('.chip-contents > ul').each(function (index) {
         var w = 100 * $(this).find('li').length + '%'
-        console.log(w)
         $(this).css('width', w)
     })
 </script>

@@ -146,6 +146,7 @@ h3 {
 .chip-contents>ul {
     display: flex;
     width: max-content;
+    overflow: hidden;
     transition: transform .3s ease-in-out;
     gap: 20px;
 }
@@ -153,10 +154,13 @@ h3 {
 .chip-contents>ul>li {
     flex: 100%;
     padding-right: 20px;
-    /* opacity: 0;
-    transition: opacity .3s ease; */
+    align-self: flex-start;
+    /* 淡入淡出： */
+    opacity: 0;
+    transition: opacity .3s ease;
 }
 
+/* 淡入淡出： */
 .chip-contents>ul>li.active {
     opacity: 1;
 }
@@ -284,6 +288,12 @@ h3 {
     .chip-links>ul {
         padding: 20px;
         padding-bottom: 0;
+    }
+
+    .chip-links>ul>li:hover {
+        background-color: #DDDDDD;
+        border-color: #DDDDDD;
+        color: #1E2333;
     }
 
     .chip-contents {
