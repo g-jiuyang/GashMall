@@ -1361,6 +1361,7 @@
         var nowChip = $(this);
         var chipC = $(this).attr('for');
         var tranX = -100 + '% + 20px * ' + (chipLength - 1) + ')/' + chipLength + ' - 20px)*' + nowChip.index();
+        var bodyW = $('body').width();
 
         nowTab.find('li').removeClass('active');
         $(this).addClass('active');
@@ -1373,6 +1374,19 @@
         // 淡入淡出：
         nowTab.find('.chip-contents > ul > li').removeClass('active');
         $('.' + chipC).addClass('active');
+
+        // 判斷chip-links滾動位置
+        var prevW = 0;
+        $(this).prevAll().each(function (index) {
+            prevW += parseInt($(this).outerWidth() + 12)
+        })
+        var totalW = nowChip.outerWidth() + prevW + 40
+        if (totalW > bodyW) {
+            nowTab.find('.chip-links').animate({ scrollLeft: prevW - bodyW / 3 }, "slowly")
+        }
+        if (totalW < bodyW) {
+            nowTab.find('.chip-links').animate({ scrollLeft: 0 }, "slowly")
+        }
     })
 
 
