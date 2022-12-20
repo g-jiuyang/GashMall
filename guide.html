@@ -1283,6 +1283,11 @@
 </body>
 
 <script type="text/javascript">
+    setTimeout(function () {
+        $('#recharge .chip-contents > ul').css('height', $('#recharge .chip-1').height() + 'px')
+    }, 300);
+
+
     // 當前為支付方式時 增加active樣式
     if (window.location.href.indexOf("payment") > -1) {
         $('#tabs li').removeClass('active');
