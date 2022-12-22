@@ -180,6 +180,8 @@ h3 {
 
 .chip-contents img {
     max-width: 100%;
+    margin: 0 12px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 10%);
 }
 
 /* Chips -- end */
@@ -258,10 +260,10 @@ h3 {
         padding: 0 12px;
         background-color: #FFE3EC;
         z-index: 5;
+        position: fixed;
     }
 
     .tab-links li {
-        border-bottom: 2px solid transparent;
         font-size: 16px;
     }
 
@@ -269,8 +271,54 @@ h3 {
         padding: 14px 8px;
     }
 
-    .tab-links li.active {
-        border-color: #E72E6B;
+    .tab-links:after {
+        content: '';
+        height: 2px;
+        width: 79px;
+        position: absolute;
+        bottom: 0;
+        left: 12px;
+        background-color: #E72E6B;
+    }
+
+    .tab-links.recharge:after {
+        animation: tab-l .5s ease both;
+    }
+
+    .tab-links.payment:after {
+        animation: tab-r .5s ease both;
+    }
+
+    @keyframes tab-l {
+        0% {
+            left: 91px;
+            width: 79px;
+        }
+
+        50% {
+            left: 12px;
+            width: 158px;
+        }
+
+        100% {
+            width: 79px;
+        }
+    }
+
+    @keyframes tab-r {
+        0% {
+            width: 79px;
+        }
+
+        50% {
+            left: 12px;
+            width: 158px;
+        }
+
+        100% {
+            width: 79px;
+            left: 91px;
+        }
     }
 
     /* Tab Links -- end */

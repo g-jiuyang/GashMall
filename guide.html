@@ -423,16 +423,7 @@
                                         <section>
                                             <h3>STEP 1</h3>
                                             <p>選擇欲購買商品。</p>
-                                            <img title="原圖" src="images/guide/payment/chip1/STEP1.png" alt="STEP 1"
-                                                style="height: 400px;">
-                                            <img title="Figma 1x" src="images/guide/payment/chip1/STEP1-1x.png"
-                                                alt="STEP 1" style="height: 400px;">
-                                            <img title="Figma 2x" src="images/guide/payment/chip1/STEP1-2x.png"
-                                                alt="STEP 1" style="height: 400px;">
-                                            <img title="Figma 3x" src="images/guide/payment/chip1/STEP1-3x.png"
-                                                alt="STEP 1" style="height: 400px;">
-                                            <img title="Figma 4x" src="images/guide/payment/chip1/STEP1-4x.png"
-                                                alt="STEP 1" style="height: 400px;">
+                                            <img src="images/guide/payment/chip1/STEP1.png" alt="STEP 1">
                                         </section>
                                         <section>
                                             <h3>STEP 2</h3>
@@ -1334,6 +1325,9 @@
             var chipH = $(tabC).find('.chip-contents > ul > li.active').height()
             $(tabC).find('.chip-contents > ul').css('height', chipH + 'px');
         }, 300);
+
+        $('.tab-links').removeClass('payment')
+        $('.tab-links').addClass('recharge')
     });
     $('#tabs li:nth-child(2)').click(function () {
         $("html, body").animate({ scrollTop: 0 }, "fast");
@@ -1351,7 +1345,12 @@
             var chipH = $(tabC).find('.chip-contents > ul > li.active').height();
             $(tabC).find('.chip-contents > ul').css('height', chipH + 'px');
         }, 300);
+
+        $('.tab-links').removeClass('recharge')
+        $('.tab-links').addClass('payment')
     });
+
+
 
 
     // Chips切換(第二層頁籤)

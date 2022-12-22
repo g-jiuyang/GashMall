@@ -1315,6 +1315,9 @@
             var chipH = $(tabC).find('.chip-contents > ul > li.active').height()
             $(tabC).find('.chip-contents > ul').css('height', chipH + 'px');
         }, 300);
+
+        $('.tab-links').removeClass('payment')
+        $('.tab-links').addClass('recharge')
     });
     $('#tabs li:nth-child(2)').click(function () {
         $("html, body").animate({ scrollTop: 0 }, "fast");
@@ -1332,6 +1335,9 @@
             var chipH = $(tabC).find('.chip-contents > ul > li.active').height();
             $(tabC).find('.chip-contents > ul').css('height', chipH + 'px');
         }, 300);
+
+        $('.tab-links').removeClass('recharge')
+        $('.tab-links').addClass('payment')
     });
 
 
