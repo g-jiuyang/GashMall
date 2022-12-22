@@ -274,7 +274,7 @@ h3 {
     .tab-links:after {
         content: '';
         height: 2px;
-        width: 79px;
+        width: calc(4em + 24px);
         position: absolute;
         bottom: 0;
         left: 12px;
@@ -282,42 +282,42 @@ h3 {
     }
 
     .tab-links.recharge:after {
-        animation: tab-l .5s ease both;
+        animation: tab-l .3s ease both;
     }
 
     .tab-links.payment:after {
-        animation: tab-r .5s ease both;
+        animation: tab-r .3s ease both;
     }
 
     @keyframes tab-l {
         0% {
-            left: 91px;
-            width: 79px;
+            left: calc(4em + 24px + 12px);
+            width: calc(4em + 24px);
         }
 
         50% {
             left: 12px;
-            width: 158px;
+            width: calc(8em + 32px + 12px);
         }
 
         100% {
-            width: 79px;
+            width: calc(4em + 24px);
         }
     }
 
     @keyframes tab-r {
         0% {
-            width: 79px;
+            width: calc(4em + 24px);
         }
 
         50% {
             left: 12px;
-            width: 158px;
+            width: calc(8em + 32px + 12px);
         }
 
         100% {
-            width: 79px;
-            left: 91px;
+            width: calc(4em + 24px);
+            left: calc(4em + 24px + 12px);
         }
     }
 
